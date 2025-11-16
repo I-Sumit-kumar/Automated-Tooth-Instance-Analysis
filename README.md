@@ -1,141 +1,139 @@
-🦷 Tooth Instance Analysis using U-Net
+<p align="center">
+  <img src="https://github.com/I-Sumit-kumar/Automated-Tooth-Instance-Analysis/assets/your-image-url-or-logo.png" width="100" alt="Tooth Logo">
+</p>
 
-A deep learning project for segmenting teeth in panoramic dental X-ray images using the U-Net architecture.
-This project automates tooth boundary detection and supports dental diagnostics by generating accurate segmentation masks.
+<h1 align="center">🦷 Automated Tooth Instance Analysis using U-Net</h1>
+<p align="center">
+  <b>Segmentation and boundary detection for teeth in panoramic dental X-ray images</b>
+  <br>
+  <i>Deep learning applied to dental diagnostics, using U-Net.</i>
+</p>
 
-📌 Project Overview
+---
 
-This project implements a U-Net-based image segmentation pipeline to automatically identify and segment individual teeth from X-ray images. It is designed to support dental practitioners by enabling faster and more accurate assessment of dental structures.
+## 📌 Overview
 
-  The notebook includes:
-  
-  Dataset preprocessing
-  
-  Model architecture (U-Net)
-  
-  Training and validation
-  
-  Visualization of predictions
-  
-  Evaluation metrics
+Automated Tooth Instance Analysis leverages the power of <b>U-Net</b> for precise segmentation of teeth from panoramic dental X-ray images. It streamlines tooth boundary detection, generating accurate segmentation masks to assist dental professionals in diagnostics.
 
-🚀 Features
+<p align="center">
+  <img src="https://github.com/I-Sumit-kumar/Automated-Tooth-Instance-Analysis/assets/sample_xray_pred.png" width="600" alt="X-ray Sample Prediction">
+  <br>
+  <i>Example: Predicted mask (blue) overlayed on an X-ray image</i>
+</p>
 
-  ✔ Fully implemented U-Net architecture for medical image segmentation
-  
-  ✔ Supports grayscale panoramic dental X-rays
-  
-  ✔ Automatic mask generation
-  
-  ✔ Training pipeline with callbacks
-  
-  ✔ Visualization of model predictions
-  
-  ✔ Easily extendable to instance or semantic segmentation
+---
 
-📂 Project Structure
+## 💡 Features
+
+- ✅ **U-Net Architecture**: End-to-end training pipeline for medical image segmentation.
+- ✅ **Panoramic X-ray Support**: Handles grayscale dental X-rays.
+- ✅ **Automatic Mask Generation**: Accurately segment individual teeth.
+- ✅ **Visualization**: Prediction overlays and training curves.
+- ✅ **Customizable & Extendable**: Supports instance/semantic segmentation, post-processing, and more.
+
+---
+
+## 📂 Project Structure
+
+```
 Tooth_Instance_Analysis/
-│── Tooth_Instance_Analysis.ipynb   # Complete training + inference pipeline
-│── data/
-│     ├── images/                   # Input X-ray images
-│     └── masks/                    # Ground-truth segmentation masks
-│── README.md
+├── Tooth_Instance_Analysis.ipynb   # Jupyter notebook: training + inference
+├── data/
+│   ├── images/                     # Input X-ray images
+│   └── masks/                      # Ground-truth segmentation masks
+├── README.md
+```
 
-🧠 Model Architecture
+---
 
-This project uses the U-Net architecture, specifically designed for biomedical image segmentation.
-U-Net is chosen because:
+## 🧠 Model Architecture
 
-  It works well on small datasets
-  
-  It preserves spatial information via skip connections
-  
-  It generates pixel-accurate segmentation masks
+U-Net is especially powerful for biomedical segmentation tasks:
+- Works effectively with small datasets
+- Preserves spatial info via skip connections
+- Produces pixel-level segmentation masks
 
-Key components:
+**Main Components:**
+- **Encoder**: Feature extraction through convolutions
+- **Decoder**: Upsampling and spatial reconstruction
+- **Skip Connections**: Retain fine details at each scale
 
-  Encoder: feature extraction
-  
-  Decoder: upsampling and spatial reconstruction
-  
-  Skip connections: retain fine-grained details
+---
 
-🛠 Tech Stack
-| Component            | Technology         |
-| -------------------- | ------------------ |
-| Language             | Python             |
-| Deep Learning        | TensorFlow / Keras |
-| Processing           | NumPy, OpenCV      |
-| Visualization        | Matplotlib         |
-| Training Environment | Google Colab       |
+## 🛠 Technology Stack
 
+| Component            | Technology              |
+| -------------------- | ---------------------- |
+| Language             | Python                 |
+| Deep Learning        | TensorFlow / Keras     |
+| Image Processing     | NumPy, OpenCV          |
+| Visualization        | Matplotlib             |
+| Training Environment | Google Colab/Jupyter   |
 
-📥 Installation
+---
 
-Clone the repository:
+## 📥 Installation
 
-    git clone https://github.com/yourusername/Tooth_Instance_Analysis.git
-    cd Tooth_Instance_Analysis
+**Clone the repository**
+```bash
+git clone https://github.com/I-Sumit-kumar/Automated-Tooth-Instance-Analysis.git
+cd Automated-Tooth-Instance-Analysis
+```
 
+**Install dependencies**
+```bash
+pip install tensorflow numpy opencv-python matplotlib scikit-learn
+```
+---
 
+## ▶️ How to Run
 
-Install dependencies:
+1. Open `Tooth_Instance_Analysis.ipynb` in Jupyter Notebook or Google Colab
+2. Mount/load your dataset (`data/images/` & `data/masks/`)
+3. Set dataset paths in notebook as required
+4. Run all cells sequentially:
+    - Preprocess images
+    - Train the U-Net model
+    - Evaluate segmentation performance
+    - Visualize predictions & metrics
 
-    pip install tensorflow numpy opencv-python matplotlib scikit-learn
+---
 
+## 📊 Results
 
-▶️ How to Run
+- **Predicted Masks**: For each X-ray image
+- **Overlay Visualizations**: Input X-ray + predicted mask
+- **Training Curves**: Loss & Accuracy
+- *Tip:* Adjust thresholding to fine-tune boundaries.
 
-1. Open Tooth_Instance_Analysis.ipynb in Jupyter or Google Colab
+---
 
-2. Mount your dataset
+## 🔧 Customization Ideas
 
-3. Set the correct dataset paths
+- Multi-class segmentation (e.g., types of teeth)
+- Tooth numbering/labeling
+- Instance segmentation (e.g., upgrade to Mask R-CNN)
+- Post-processing: contour extraction, polygon mapping
 
-4. Run all cells to:
+---
 
-    preprocess images
-    
-    train the U-Net model
-    
-    evaluate results
-    
-    generate segmentation masks
+## 🤝 Contributions
 
-📊 Results
+Pull requests and feature suggestions are welcome!
+- Improved data preprocessing
+- Enhanced U-Net variants (attention, residual, etc.)
+- Better post-processing
+- New evaluation methods
 
-The model outputs:
+---
 
-  Predicted masks
-  
-  Overlay visualizations: X-ray + predicted mask
-  
-  Training curves (loss & accuracy)
+## 📜 License
 
-You can modify thresholding to refine segmentation boundaries.
+`MIT License`.
 
-🔧 Customization
+---
 
-You can extend this project to:
-
-  Multi-class segmentation
-  
-  Tooth numbering / labeling
-  
-  Instance segmentation using Mask R-CNN
-  
-  Post-processing (contour extraction, polygon mapping)
-
-🤝 Contributions
-
-Pull requests and improvements are welcome — especially enhancements related to:
-
-  Better preprocessing
-  
-  Improved U-Net variants
-  
-  Post-processing and evaluation methods
-
-📜 License
-
-This project is released under the MIT License.
+<p align="center">
+  <em>Empowering dental AI research with open-source tools.</em><br>
+  <a href="https://github.com/I-Sumit-kumar/Automated-Tooth-Instance-Analysis">🌐 Repository</a>
+</p>
